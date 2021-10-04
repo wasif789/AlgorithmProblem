@@ -13,6 +13,7 @@ namespace AlgorithmProblem
             Console.WriteLine("Enter 2-to Perform Binary Search in a Word List");
             Console.WriteLine("Enter 3-to Perform Insertion Sort");
             Console.WriteLine("Enter 4-to Perform bubble Sort");
+            Console.WriteLine("Enter 5-to Perform Merge Sort");
             int ch = Convert.ToInt32(Console.ReadLine());
             switch (ch)
             {
@@ -51,6 +52,11 @@ namespace AlgorithmProblem
                 case 4:
                     List<int> buubleSort = ArrayInput();
                     BubbleSort.BubbleSorting(buubleSort);
+                    break;
+                case 5:
+                    List<int> mergeSort = ArrayInput();
+                    mergeSort = MergeSorting.MergeSort(mergeSort);
+                    InsertionSort.Display(mergeSort);
                     break;
             }
 
