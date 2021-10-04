@@ -7,6 +7,7 @@ namespace AlgorithmProblem
     class Permutation
     {
         public static List<string> recursiveList = new List<string>();
+        internal static List<string> iterativeList;
 
         //Permutation using Recursion
         public static void RecursivePermutation(String str, int l, int r)
@@ -36,6 +37,11 @@ namespace AlgorithmProblem
             charArray[j] = temp;
             string s = new string(charArray);
             return s;
+        }
+
+        internal static void IterativePermutation(string str, int n)
+        {
+            throw new NotImplementedException();
         }
     }
 }
