@@ -15,7 +15,7 @@ namespace AlgorithmProblem
             Console.WriteLine("Enter 4-to Perform bubble Sort");
             Console.WriteLine("Enter 5-to Perform Merge Sort");
             Console.WriteLine("Enter 6-to check anagram or not");
-            Console.WriteLine("Enter 7-to check Prime in a given range");
+            Console.WriteLine("Enter 7-to check Prime in a given range and print anagram and palindrome");
             int ch = Convert.ToInt32(Console.ReadLine());
             switch (ch)
             {
