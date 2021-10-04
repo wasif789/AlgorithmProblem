@@ -4,23 +4,25 @@ using System.Text;
 
 namespace AlgorithmProblem
 {
-    class BubbleSort
+    class BubbleSort<T> where T : IComparable
     {
-        public static void BubbleSorting(List<int> arrayList)
+        InsertionSort<T> bubbleDisplay = new InsertionSort<T>();
+        public void BubbleSorting(List<T> arrayList)
         {
             int n = arrayList.Count;
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - i - 1; j++)
                 {
-                    if (arrayList[j] > arrayList[j + 1])
+                    if (arrayList[j].CompareTo(arrayList[j + 1]) > 0)
                     {
-                        InsertionSort.Swap(arrayList, j + 1, j);
+                        bubbleDisplay.Swap(arrayList, j + 1, j);
                     }
                 }
             }
             Console.WriteLine("*****BUBBLE SORT*****");
-            InsertionSort.Display(arrayList);
+            bubbleDisplay.Display(arrayList);
+
         }
 
     }
