@@ -16,6 +16,7 @@ namespace AlgorithmProblem
             Console.WriteLine("Enter 5-to Perform Merge Sort");
             Console.WriteLine("Enter 6-to check anagram or not");
             Console.WriteLine("Enter 7-to check Prime in a given range and print anagram and palindrome");
+            Console.WriteLine("Enter 8-to play a guess number");
             //Creating generics Object for generic Class
             BinarySearchInList<string> binarySearchInList = new BinarySearchInList<string>();
             InsertionSort<int> insertion = new InsertionSort<int>();
@@ -77,6 +78,10 @@ namespace AlgorithmProblem
                     Console.WriteLine("Enter end range");
                     int end = Convert.ToInt32(Console.ReadLine());
                     PrimeCheck.PrimeChecker(start, end);
+                    break;
+                case 8:
+                    GuessANumber obj1 = new GuessANumber();
+                    obj1.ThinkANumber();
                     break;
             }
 
